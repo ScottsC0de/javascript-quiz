@@ -90,3 +90,19 @@ startButton.addEventListener("click", function (event) {
     showQuiz.style.display = "block";
     startQuiz();
 });
+
+// timer function. removes 10 seconds off the clock if answer is wrong, returns to home page if time hits 0
+function startTimer() {
+    // Sets timer
+    timer = setInterval(function () {
+        timerCount--;
+        quizTimer.textContent = "Time Remaining: " + timerCount + " seconds";
+
+        if (totalTime === timerCount) {
+            clearInterval(timer);
+            alert("Your time is up! Returning to home screen...");
+            // return user home using the handy window.location.href
+            window.location.href = "index.html";
+        }
+    }, 1000);
+};
