@@ -73,3 +73,12 @@ var highScoresList = document.getElementById("high-scores");
 var returnHomeBtn = document.getElementById("return-btn");
 var userInitials = document.getElementById("initials");
 var savedScores = document.getElementById("scores-list");
+
+// creating the loop of questions
+var currentQuestion = 0;
+
+// setting up timer variables
+var totalTime = 0;
+
+// set to 76 seconds since first number isn't popping up immediately
+var timerCount = 76;
