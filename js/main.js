@@ -185,10 +185,15 @@ function saveScore() {
         highScores.push(userSavedStuff);
         highScoresList.innerHTML = userSavedStuff;
         localStorage.setItem(highScores, JSON.stringify(highScores));
-        var displayScores = JSON.parse(localStorage.getItem(highScores));
+        /* var displayScores = JSON.parse(localStorage.getItem(highScores));
         savedScores.textContent = displayScores;
-        console.log(displayScores);
+        console.log(displayScores); */
     })
+};
+
+// user can only click submit once
+function oneClick() {
+    document.getElementById("submit-button").disabled = true
 };
 
 saveScore();
