@@ -192,3 +192,8 @@ function saveScore() {
 };
 
 saveScore();
+
+// return home button using the handy window.location.href
+returnHomeBtn.addEventListener("click", function (event) {
+    window.location.href = "index.html";
+});
