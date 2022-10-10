@@ -107,12 +107,41 @@ function startTimer() {
     }, 1000);
 };
 
-// the first set of questions
+// starts the quiz
 function startQuiz() {
+    // the first set of questions
     quizQuestions.textContent = questionsArray[currentQuestion].question;
     answerBtn1.textContent = questionsArray[currentQuestion].answers.a;
     answerBtn2.textContent = questionsArray[currentQuestion].answers.b;
     answerBtn3.textContent = questionsArray[currentQuestion].answers.c;
     answerBtn4.textContent = questionsArray[currentQuestion].answers.d;
+    // the check answer function is then called
     checkAnswer();
+};
+
+// checks to see if the answer is correct or incorrect
+function checkAnswer() {
+    // targetting every answer button
+    var answerBtns = document.querySelectorAll(".answer-btns");
+
+    // a for each method to run through the questions array and replace text content after button click
+    answerBtns.forEach(userAnswer => {
+        userAnswer.addEventListener("click", function (event) {
+            // stores user button click as a variable
+            var userAnswer = event.target.value;
+            // correct answer from questions array
+            var correctAnswer = questionsArray[currentQuestion].correctAnswer;
+            // Correct or Incorrect pops up, 10 seconds taken if answer is wrong
+            if (userAnswer === correctAnswer) {
+                correctOrIncorrect.textContent = "// Correct!";
+            } else {
+                correctOrIncorrect.textContent = "// Incorrect!"
+                timerCount -= 10;
+            }
+            nextQuestion();
+            // console log was a huge help here
+            // console.log(userAnswer)
+            // console.log(correctAnswer);
+        })
+    });
 };
