@@ -106,3 +106,13 @@ function startTimer() {
         }
     }, 1000);
 };
+
+// the first set of questions
+function startQuiz() {
+    quizQuestions.textContent = questionsArray[currentQuestion].question;
+    answerBtn1.textContent = questionsArray[currentQuestion].answers.a;
+    answerBtn2.textContent = questionsArray[currentQuestion].answers.b;
+    answerBtn3.textContent = questionsArray[currentQuestion].answers.c;
+    answerBtn4.textContent = questionsArray[currentQuestion].answers.d;
+    checkAnswer();
+};
