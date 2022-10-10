@@ -52,3 +52,24 @@ var questionsArray = [{
     },
     correctAnswer: "b"
 },];
+
+// targetting the HTML elements to work with
+var startButton = document.getElementById("start-button");
+var rulesPage = document.getElementById("rules-page");
+var showQuiz = document.getElementById("quiz");
+var quizQuestions = document.getElementById("question");
+var answerBtns = document.querySelector(".answer-btns");
+var answerBtn1 = document.getElementById("answer-btn1");
+var answerBtn2 = document.getElementById("answer-btn2");
+var answerBtn3 = document.getElementById("answer-btn3");
+var answerBtn4 = document.getElementById("answer-btn4");
+var quizAnswers = document.getElementById("answers");
+var correctOrIncorrect = document.getElementById("correct-incorrect");
+var quizTimer = document.getElementById("timer");
+var resultsPage = document.getElementById("results-page");
+var submitBtn = document.getElementById("submit-button");
+var userScore = document.getElementById("score");
+var highScoresList = document.getElementById("high-scores");
+var returnHomeBtn = document.getElementById("return-btn");
+var userInitials = document.getElementById("initials");
+var savedScores = document.getElementById("scores-list");
