@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>JavaScript Quiz - Test Your JavaScript Knowledge</title>
+</head>
+
+<body>
+    <main>
+        <header id="header">
+            <h1>JavaScript Fundamentals Quiz</h1>
+            <h2>Test your <abbr title="JavaScript">JS</abbr> knowledge 🤓</h2>
+        </header>
+
+        <div id="container">
+
+            <div id="rules-page">
+                <section>
+                    <h3>Quiz Rules:</h3>
+                    <ul>
+                        <li>You have 75 seconds to complete the quiz</li>
+                        <li>You must answer all 5 questions</li>
+                        <li>Each question wrong removes 10 seconds from the remaining time</li>
+                    </ul>
+                    <button id="start-button">Got It. Start Quiz!</button>
+                </section>
+            </div>
+
+            <div id="quiz">
+                <div id="question">
+                </div>
+                <section id="answers">
+                    <button class="answer-btns" id="answer-btn1" value="a"></button>
+                    <button class="answer-btns" id="answer-btn2" value="b"></button>
+                    <button class="answer-btns" id="answer-btn3" value="c"></button>
+                    <button class="answer-btns" id="answer-btn4" value="d"></button>
+                    <div id="correct-incorrect"></div>
+                </section>
+
+            </div>
+            <br>
+            <div id="timer"></div>
+
+            <div id="results-page">
+                <h3 id="score">Score: </h3>
+                <p>Save your score below:</p>
+                <label for="initials">Enter your initials here!</label>
+                <input type="text" id="initials">
+                <button id="submit-button">Submit Score</button>
+                <br>
+                <h4>High Scores:</h4>
+                <ul id="high-scores">
+                    <li id="scores-list"></li>
+                </ul>
+                <button id="return-btn">Return Home!</button>
+            </div>
+
+        </div>
+
+        <script src="js/main.js"></script>
+
+    </main>
+
+
+</body>
+
+</html>
