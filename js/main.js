@@ -124,14 +124,15 @@ function checkAnswer() {
     // targetting every answer button
     var answerBtns = document.querySelectorAll(".answer-btns");
 
-    // a for each method to run through the questions array and replace text content after button click
+    // a for each method to run through the questions array and check if user answer is correct
     answerBtns.forEach(userAnswer => {
         userAnswer.addEventListener("click", function (event) {
-            // stores user button click as a variable
+            // stores user button click as a variable, .value targets html element value attributes
             var userAnswer = event.target.value;
-            // correct answer from questions array
+            // stores correct answer from questions array as variable
             var correctAnswer = questionsArray[currentQuestion].correctAnswer;
-            // Correct or Incorrect pops up, 10 seconds taken if answer is wrong
+            // checks if user button click value and the correct answer are the same
+            // correct or incorrect pops up, with 10 seconds taken if answer is wrong
             if (userAnswer === correctAnswer) {
                 correctOrIncorrect.textContent = "// Correct!";
             } else {
@@ -145,3 +146,32 @@ function checkAnswer() {
         })
     });
 };
+
+// displaying the rest of the questions
+function nextQuestion() {
+    //  if user question number is above 5, go to results page and stop timer
+    currentQuestion++
+    if (currentQuestion >= questionsArray.length) {
+        showQuiz.style.display = "none";
+        resultsPage.style.display = "block";
+        quizTimer.style.display = "none";
+        clearInterval(timer);
+        userScore.textContent = "You Scored " + timerCount + "!";
+        // if not, replace text content with next question from array
+    } else {
+        quizQuestions.textContent = questionsArray[currentQuestion].question;
+        answerBtn1.textContent = questionsArray[currentQuestion].answers.a;
+        answerBtn2.textContent = questionsArray[currentQuestion].answers.b;
+        answerBtn3.textContent = questionsArray[currentQuestion].answers.c;
+        answerBtn4.textContent = questionsArray[currentQuestion].answers.d;
+    }
+
+    // if timer hits 0 mid-quiz
+    if (timerCount < 0) {
+        clearInterval(timer);
+        alert("Your time is up! Returning to home screen...");
+        // brings user back to quiz start if they run out of time before finishing
+        window.location.href = "index.html";
+    }
+};
+
