@@ -82,3 +82,11 @@ var totalTime = 0;
 
 // set to 76 seconds since first number isn't popping up immediately
 var timerCount = 76;
+
+// when the user hits the start button
+startButton.addEventListener("click", function (event) {
+    startTimer();
+    rulesPage.style.display = "none";
+    showQuiz.style.display = "block";
+    startQuiz();
+});
