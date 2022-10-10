@@ -175,3 +175,20 @@ function nextQuestion() {
     }
 };
 
+// empty array for user initials and scores to be saved locally
+var highScores = [];
+
+// push scores into array and save them locally
+function saveScore() {
+    submitBtn.addEventListener("click", function (event) {
+        var userSavedStuff = userInitials.value + ": " + timerCount;
+        highScores.push(userSavedStuff);
+        highScoresList.innerHTML = userSavedStuff;
+        localStorage.setItem(highScores, JSON.stringify(highScores));
+        var displayScores = JSON.parse(localStorage.getItem(highScores));
+        savedScores.textContent = displayScores;
+        console.log(displayScores);
+    })
+};
+
+saveScore();
