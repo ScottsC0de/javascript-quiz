@@ -181,6 +181,7 @@ var highScores = [];
 // push scores into array and save them locally
 function saveScore() {
     submitBtn.addEventListener("click", function (event) {
+        // change to userLocalStorage
         var userSavedStuff = userInitials.value + ": " + timerCount;
         highScores.push(userSavedStuff);
         highScoresList.innerHTML = userSavedStuff;
