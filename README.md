@@ -16,11 +16,9 @@ See "Video" below for a visual demonstration.
 
 ## Links 
 
-Website URL:
-    * 
+Website URL: https://scottsc0de.github.io/javascript-quiz/
 
-GitHub Repo:
-    * https://github.com/ScottsC0de/javascript-quiz
+GitHub Repo: https://github.com/ScottsC0de/javascript-quiz
 
 ## Video
 
