@@ -175,29 +175,24 @@ function nextQuestion() {
     }
 };
 
-// empty array for user initials and scores to be saved locally
-var highScores = [];
-
-// push scores into array and save them locally
-function saveScore() {
-    submitBtn.addEventListener("click", function (event) {
-        // change to userLocalStorage
-        var userSavedStuff = userInitials.value + ": " + timerCount;
-        highScores.push(userSavedStuff);
-        highScoresList.innerHTML = userSavedStuff;
-        localStorage.setItem(highScores, JSON.stringify(highScores));
-        /* var displayScores = JSON.parse(localStorage.getItem(highScores));
-        savedScores.textContent = displayScores;
-        console.log(displayScores); */
-    })
-};
+// press submit button to push scores into array and save them locally
+submitBtn.addEventListener("click", function (event) {
+    // empty array for user initials and scores to be saved locally
+    var highScores = [];
+    var userLocalStorage = userInitials.value + ": " + timerCount;
+    highScores.push(userLocalStorage);
+    localStorage.setItem(highScores, JSON.stringify(highScores));
+    JSON.parse(localStorage.getItem(highScores));
+    for (let i = 0; i < localStorage.length; i++) {
+        var displayScores = JSON.parse(localStorage.getItem(localStorage.key(i)));
+        displayScores.forEach(score => highScoresList.innerHTML += "<br>" + "<br>" + Object.values(score).join(""));
+    }
+});
 
 // user can only click submit once
 function oneClick() {
     document.getElementById("submit-button").disabled = true
 };
-
-saveScore();
 
 // return home button using the handy window.location.href
 returnHomeBtn.addEventListener("click", function (event) {
