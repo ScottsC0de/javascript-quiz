@@ -40,14 +40,14 @@ button:hover {
     background-color: #4095c6;
 }
 
-#high-scores {
-    list-style: upper-roman;
-}
-
 ul,
 li {
     list-style: none;
     padding: 10px;
+}
+
+input {
+    width: 50px;
 }
 
 #container {
