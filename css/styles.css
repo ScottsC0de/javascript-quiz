@@ -1,7 +1,9 @@
+/* the font color seen throughout the quiz */
 :root {
     --pink-font: rgb(249, 0, 145);
 }
 
+/* colors when text is highlighted with cursor */
 ::selection {
     background-color: var(--pink-font);
     color: black;
@@ -12,15 +14,15 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+body {
+    background-color: black;
+    color: var(--pink-font);
+}
+
 header {
     padding: 10px;
     margin: 10px;
     text-align: center;
-}
-
-body {
-    background-color: black;
-    color: var(--pink-font);
 }
 
 button {
@@ -33,9 +35,11 @@ button {
     width: 200px;
     margin: 50px;
     font-size: 1rem;
+    /* for button hover color change */
     transition: all 0.2s;
 }
 
+/* changes button color while hovering cursor over them */
 button:hover {
     background-color: #4095c6;
 }
@@ -56,7 +60,6 @@ input {
 }
 
 #start-button {
-    /* 512 half the 1024px */
     display: inline-block;
     height: 100px;
     width: 400px;
@@ -80,6 +83,7 @@ input {
     border: var(--pink-font) 10px ridge;
 }
 
+/* quiz does not appear until start button is pressed */
 #quiz {
     display: none;
     border: var(--pink-font) 10px ridge;
@@ -91,18 +95,19 @@ input {
     padding: 20px;
 }
 
-#results-page {
-    display: none;
-    border: var(--pink-font) 10px ridge;
-    margin: 50px;
-    font-size: 1.30rem;
+#correct-incorrect {
+    font-size: 1.5rem;
+    padding: 30px;
 }
 
 #timer {
     font-size: 1.25rem;
 }
 
-#correct-incorrect {
-    font-size: 1.5rem;
-    padding: 30px;
+/* results page is shown once quiz is finished */
+#results-page {
+    display: none;
+    border: var(--pink-font) 10px ridge;
+    margin: 50px;
+    font-size: 1.30rem;
 }
