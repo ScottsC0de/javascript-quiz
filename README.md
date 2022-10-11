@@ -24,3 +24,5 @@ See "Video" below for a visual demonstration.
 
 
 ## Screenshot
+
+![alt text](img/quiz-site-pic.png)
