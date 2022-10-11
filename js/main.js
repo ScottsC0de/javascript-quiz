@@ -10,18 +10,18 @@ var questionsArray = [{
     correctAnswer: "b"
 },
 {
-    question: "Question 2: Which of the following are not JavaScript data types?",
+    question: "Question 2: Which one of the following is not a JavaScript data type?",
     answers: {
-        a: "Numbers",
-        b: "Strings",
-        c: "Booleans",
-        d: "Attributes"
+        a: "Number",
+        b: "String",
+        c: "Boolean",
+        d: "Attribute"
     },
     correctAnswer: "d"
 },
 
 {
-    question: "Question 3: Which of the following is the correct way to store data in a variable?",
+    question: "Question 3: Which one of the following is the correct way to store data in a variable?",
     answers: {
         a: "var x = 0",
         b: "x = 0",
