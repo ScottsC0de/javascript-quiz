@@ -74,8 +74,16 @@ li {
     background-color: #4095c6;
 }
 
+#rules-page {
+    font-size: 1.30rem;
+    margin: 50px;
+    border: var(--pink-font) 10px ridge;
+}
+
 #quiz {
     display: none;
+    border: var(--pink-font) 10px ridge;
+    margin: 40px;
 }
 
 #question {
@@ -85,4 +93,16 @@ li {
 
 #results-page {
     display: none;
+    border: var(--pink-font) 10px ridge;
+    margin: 50px;
+    font-size: 1.30rem;
+}
+
+#timer {
+    font-size: 1.25rem;
+}
+
+#correct-incorrect {
+    font-size: 1.5rem;
+    padding: 30px;
 }
