@@ -22,6 +22,7 @@ GitHub Repo: https://github.com/ScottsC0de/javascript-quiz
 
 ## Video
 
+https://user-images.githubusercontent.com/56902166/194984888-9e20cb42-b8e7-4fb9-8fb1-b82e20850fca.mov
 
 ## Screenshot
 
