@@ -77,7 +77,7 @@ var savedScores = document.getElementById("scores-list");
 // creating the loop of questions
 var currentQuestion = 0;
 
-// setting up timer variables
+// setting up timer variable
 var totalTime = 0;
 
 // set to 76 seconds since first number isn't popping up immediately
@@ -136,7 +136,7 @@ function checkAnswer() {
             if (userAnswer === correctAnswer) {
                 correctOrIncorrect.textContent = "// Correct!";
             } else {
-                correctOrIncorrect.textContent = "// Incorrect!"
+                correctOrIncorrect.textContent = "// Incorrect!";
                 timerCount -= 10;
             }
             nextQuestion();
@@ -183,6 +183,7 @@ submitBtn.addEventListener("click", function (event) {
     highScores.push(userLocalStorage);
     localStorage.setItem(highScores, JSON.stringify(highScores));
     JSON.parse(localStorage.getItem(highScores));
+    // for loop iterates through local storage array and posts the scores to the page
     for (let i = 0; i < localStorage.length; i++) {
         var displayScores = JSON.parse(localStorage.getItem(localStorage.key(i)));
         displayScores.forEach(score => highScoresList.innerHTML += "<br>" + "<br>" + Object.values(score).join(""));
@@ -191,7 +192,7 @@ submitBtn.addEventListener("click", function (event) {
 
 // user can only click submit once
 function oneClick() {
-    document.getElementById("submit-button").disabled = true
+    document.getElementById("submit-button").disabled = true;
 };
 
 // return home button using the handy window.location.href
